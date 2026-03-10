@@ -566,6 +566,13 @@ fi
 pip install comfy-aimdo
 pip install comfy-kitchen
 
+# Post post setup script
+
+if [ -f "/workspace/post_setup.sh" ]; then
+    echo "Running post setup script..."
+    bash /workspace/post_setup.sh
+fi
+
 # Start ComfyUI
 
 echo "▶️  Starting ComfyUI"
